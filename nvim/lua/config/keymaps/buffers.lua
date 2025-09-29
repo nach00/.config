@@ -4,7 +4,6 @@ map({ "n", "v" }, "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 -- map({ "n" }, "<Tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 -- map({ "n" }, "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 
-map("n", "Q", "<cmd>bdelete<cr>", { desc = "Close buffer" })
 -- map("n", "<D-S-t>", "<cmd>lua _G.reopen_last_buffer()<CR>", { desc = "Reopen buffer" })
 
 -- Window split keymaps

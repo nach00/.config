@@ -1,13 +1,6 @@
 -- Disable
 -- map("n", "<D-Left>", "<Nop>", { desc = "Disable Cmd+Left" })
 -- map("n", "<D-Right>", "<Nop>", { desc = "Disable Cmd+Right" })
--- Undo/Redo
-map({ "n", "v", "i" }, "<D-z>", "<cmd>undo<CR>", { desc = "Undo", noremap = true })
-map({ "n", "v", "i" }, "<D-S-z>", "<cmd>redo<CR>", { desc = "Redo", noremap = true })
-
--- save file
-map({ "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
-map({ "i" }, "<D-s>", "<Esc><cmd>w<CR>i<Right>", { desc = "Save file (⌘S)" })
 
 map("n", "|", "<cmd>q!<CR>", { desc = "Quit" })
 map("n", "rr", "<cmd>cq<CR>", { desc = "Reload" })
@@ -15,7 +8,6 @@ map("n", "rr", "<cmd>cq<CR>", { desc = "Reload" })
 -- Selection and Clipboard Operations
 -- map("n", "<D-a>", "ggVG", { desc = "Select all (⌘A)", noremap = true })
 -- map("i", "<D-a>", "<Esc>ggVG", { desc = "Select all (⌘A)" })
-vim.keymap.set("n", "<D-a>", "ggVG", { desc = "Select all text (macOS)" })
 -- map("n", "<D-a>", "gg<S-v>G")
 
 map("n", "<A-3>", "ggVG", { desc = "Select all (⌘A)" })
@@ -23,16 +15,6 @@ map("i", "<A-3>", "<Esc>ggVG", { desc = "Select all (⌘A)" })
 
 -- map("n", "<A-1>", "<cmd>Telescope frecency<CR>", { desc = "frecency" })
 -- map("n", "<A-2>", "<cmd>Telescope smart_open<CR>", { desc = "smart open" })
-
--- Toggle modes
-map({ "n", "v", "o", "x" }, "j", "i", { desc = "Insert", noremap = true })
-map({ "n", "v", "o", "x" }, "l", "a", { desc = "Append", noremap = true })
-map({ "n", "v", "o", "x" }, "J", "O", { desc = "Insert above", noremap = true })
-map({ "n", "v", "o", "x" }, "L", "o", { desc = "Insert below", noremap = true })
-
--- Swap visual modes
-map({ "n" }, "v", "V", { desc = "Visual line mode" })
-map({ "n" }, "V", "v", { desc = "Visual" })
 
 -- Move Lines
 -- map("n", "<A-Down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
@@ -75,10 +57,6 @@ map("i", "<D-A-CR>", "<Esc>O<CR><space><CR><Esc><Up>^i<Del>", { desc = "insert 3
 -- Cmd-backspace
 map("i", "<C-u>", "<Esc>ddi", { desc = "Delete Line (⌘Backspace)" })
 
--- Integer operations
-map("n", "Z", "<C-a>", { desc = "Increment Integer" })
-map("n", "z", "<C-x>", { desc = "Decrement Integer" })
-
 -- Fold
 map("n", "<C-BS>", "za", { desc = "Toggle fold/unfold" })
 
@@ -91,67 +69,13 @@ map("v", "<", "<gv", { desc = "shift left" })
 map("v", ">", ">gv", { desc = "shift right" })
 
 -- Copy/Cut/Paste
-map({ "n" }, "y", 'V"+y', { desc = "copy" })
 map({ "n" }, "<D-c>", 'V"+y', { desc = "copy" })
-map({ "v" }, "y", '"+ygv', { desc = "copy" })
 map({ "v" }, "<D-c>", '"+y', { desc = "copy" })
-map({ "n" }, "X", "Vx", { desc = "cut" })
-map({ "v" }, "x", '"+x', { desc = "cut" })
 map({ "n", "v" }, "<D-x>", '"+x', { desc = "cut" })
-map({ "n", "v" }, "p", '"+p', { desc = "paste" })
 map({ "n", "v" }, "<D-v>", '"+p', { desc = "paste" })
-
--- ([{x}]) ([{x}]) ([{x}])
--- ([{<x>}])([{<x>}])
--- `xxxxxx`
--- -- Append inside pairs
--- map("n", "`", "vi`A", { desc = "append in ``" }) -- ok
--- map("n", "'", "vi'A", { desc = "append in ''" }) -- ok
--- map("n", '"', 'vi"A', { desc = 'append in ""' }) -- ok
--- map("n", "(", "vi(A", { desc = "append in ()" }) --
--- map("n", "[", "vi[A", { desc = "append in []" }) --
--- map("n", "{", "vi{A", { desc = "append in {}" }) --
--- map("n", "<", "vi<A", { desc = "append in <>" }) --
--- map("n", "~", "$F`i", { desc = "append before last ``" })
--- map("n", "<>", "$F>i", { desc = "append before last <>" })
--- map("n", "''", "$F'i", { desc = "append before last ''" })
--- map("n", '""', '$F"i', { desc = 'append before last ""' })
--- map("n", "()", "$F)i", { desc = "append before last ()" })
--- map("n", "[]", "$F]i", { desc = "append before last []" })
--- map("n", "{}", "$F}i", { desc = "append before last {}" })
--- map("n", "<C-w>", "ciw", { desc = "change word" })
--- map("n", "<C-t>", "cit", { desc = "change in tag" })
--- map("n", "<C-`>", "ci`", { desc = "change in ``" })
--- map("n", "<C-'>", "ci'", { desc = "change in ''" })
--- map("n", '<C-">', 'ci"', { desc = 'change in ""' })
--- map("n", "<C-S-'>", 'ci"', { desc = 'change in ""' })
--- map("n", "<C-S-9>", "ci(", { desc = "change in ()" })
--- map("n", "<C-[>", "ci[", { desc = "change in []" })
--- map("n", "<C-S-[>", "ci{", { desc = "change in {}" })
--- map("n", "<C-S-,>", "ci<", { desc = "change in <>" })
--- map("n", "<A-w>", "viw", { desc = "select word" }) -- ok
--- map("n", "<A-t>", "vit", { desc = "select in tag" })
--- map("n", "<A-f>", "V$%", { desc = "select function" }) -- ok
--- map("n", "<A-`>", "vi`", { desc = "select in ``" })
--- map("n", "<A-'>", "vi'", { desc = "select in ''" })
--- map("n", "<A-S-'>", 'vi"', { desc = 'select in ""' })
--- map("n", "<A-S-9>", "vi(", { desc = "select in ()" })
--- map("n", "<A-[>", "vi[", { desc = "select in []" })
--- map("n", "<A-S-[>", "vi{", { desc = "select in {}" })
--- map("n", "<A-S-,>", "vi<", { desc = "select in <>" })
--- map("n", "<C-A-t>", "vat", { desc = "select around tag" })
--- map("n", "<C-A-`>", "va`", { desc = "select around ``" })
--- map("n", "<C-A-'>", "va'", { desc = "select around ''" })
--- map("n", "<C-A-S-'>", 'va"', { desc = 'select around ""' })
--- map("n", "<C-A-S-9>", "va(", { desc = "select around ()" })
--- map("n", "<C-A-[>", "va[", { desc = "select around []" })
--- map("n", "<C-A-S-[>", "va{", { desc = "select around {}" })
--- map("n", "<C-A-S-,>", "va<", { desc = "select around <>" })
 
 -- Comment
 map({ "n", "v" }, "<leader>k", "<cmd><CR>", { desc = "+comment" })
-map("n", "k", "<cmd>norm gcc<CR><Down>", { desc = "comment" })
-map("v", "k", "<cmd>norm gcc<CR>gv", { desc = "comment" })
 map({ "n", "v" }, "<leader>kk", "<cmd>CBllline<CR>", { desc = "comment line" })
 map({ "n", "v" }, "<leader>kb", "<cmd>CBccbox<CR>", { desc = "box" })
 map({ "n", "v" }, "<leader>kl", "<cmd>CBline<CR>", { desc = "solid line" })

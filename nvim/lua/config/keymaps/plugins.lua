@@ -3,10 +3,10 @@
 -- map({ "n", "v" }, "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- Fyler
--- map({ "n", "v" }, "_", "<CMD>Fyler<CR>", { desc = "Fyler explorer" })
+map({ "n", "v" }, "=", "<CMD>Fyler kind=split_right<CR>", { desc = "Fyler explorer" })
 
 -- Open oil with preview
-vim.keymap.set("n", "-", function()
+vim.keymap.set("n", "_", function()
   local oil = require("oil")
   local util = require("oil.util")
   oil.open_float()
