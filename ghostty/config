@@ -1,0 +1,80 @@
+config-file = ~/.config/ghostty/colors
+config-file = ~/.config/ghostty/keybinds
+config-file = ~/.config/ghostty/fonts
+# theme = "/Users/jazz/.config/ghostty/tokyonight/tokyonight_night"
+theme = cyberdream
+
+# adjust-cell-height = 10%
+# command = ~/.config/zellij/smart-zellij.sh
+# initial-command = ~/.config/zellij/smart-zellij.sh
+# initial-command = /bin/zsh -c "zellij setup --generate-auto-start zsh"
+# initial-command = /bin/zsh -c "zellij attach -c main"
+# command = /bin/zsh
+# initial-command = /bin/zsh -c 'sessions=$(zellij list-sessions 2>/dev/null | grep -v "EXITED" | wc -l); case $sessions in 0) zellij attach -c primary ;; 1) zellij attach -c secondary ;; *) exec zsh ;; esac'
+# command = /bin/zsh
+# initial-command = /bin/zsh -c 'if [ $($HOME/.cargo/bin/zellij list-sessions 2>/dev/null | grep -v "EXITED" | wc -l) -eq 0 ]; then $HOME/.cargo/bin/zellij -s main; fi'
+# eval "$(zellij setup --generate-auto-start zsh)"
+# initial-command = zellij setup --generate-auto-start zsh
+command = /bin/zsh
+initial-command = /Users/jazz/.cargo/bin/zellij attach -c main
+initial-window = false
+copy-on-select = true
+mouse-hide-while-typing = true
+macos-non-native-fullscreen = visible-menu
+macos-option-as-alt = true
+macos-titlebar-style = hidden
+# native, transparent, tabs, hidden
+window-decoration= false
+window-padding-y = 0
+window-padding-x = 0
+window-padding-color = extend
+window-padding-balance = true
+window-save-state = always
+window-decoration = auto
+
+grapheme-width-method = unicode
+freetype-load-flags = hinting,force-autohint,monochrome,autohint
+selection-invert-fg-bg = false
+minimum-contrast = 1
+cursor-invert-fg-bg = false
+cursor-style = block
+cursor-click-to-move = true
+mouse-hide-while-typing = false
+mouse-shift-capture = false
+mouse-scroll-multiplier = 1
+wait-after-command = false
+abnormal-command-exit-runtime = 250
+scrollback-limit = 10000000
+link-url = true
+fullscreen = false
+
+# adjust-cursor-thickness = 300%
+# adjust-cell-width = -5%
+
+
+# custom-shader = ./shaders/animated-gradient-shader.glsl
+# custom-shader = ./shaders/retro-terminal.glsl
+# custom-shader = ./shaders/bloom.glsl
+# custom-shader = ./shaders/cursor_blaze.glsl
+# custom-shader = ./shaders/cursor_blaze_no_trail.glsl
+# custom-shader = ./shaders/cursor_blaze_tapered.glsl
+custom-shader = ./shaders/cursor_frozen.glsl
+# custom-shader = ./shaders/cursor_smear.glsl
+# custom-shader = ./shaders/cursor_smear_fade.glsl
+# custom-shader = ./shaders/manga_slash.glsl
+#
+# custom-shader-animation = true
+# quick-terminal-position = top
+# quick-terminal-screen = macos-menu-bar
+# quick-terminal-animation-duration = 0.2
+
+confirm-close-surface = false
+
+background-opacity = 0.9
+background-blur-radius = 20
+unfocused-split-opacity = 0.7
+# keybind = shift+enter=text:\n
+
+
+
+# initial-command = /bin/zsh -c "tmux new -A -s main"

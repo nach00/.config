@@ -1,0 +1,46 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : false
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "MX Master 3",
+          "vendorID" : "0x46d",
+          "productID" : "0xb023",
+          "serialNumber" : "793C5E41C09035C2"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "serialNumber" : "C41C7E74EB4F526C",
+          "category" : "mouse",
+          "productID" : "0xb024",
+          "productName" : "G604 LIGHTSPEED"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ]
+}

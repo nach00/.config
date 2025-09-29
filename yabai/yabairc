@@ -1,0 +1,169 @@
+#!/usr/bin/env sh
+
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# yabai -m config external_bar                off:0:0
+# yabai -m config menubar_opacity             1.0
+# yabai -m config mouse_follows_focus off
+# yabai -m config focus_follows_mouse         off
+# yabai -m config display_arrangement_order default
+# yabai -m config window_origin_display default
+# yabai -m config window_placement first_child
+# yabai -m config window_placement            second_child
+# yabai -m config window_zoom_persist         on
+# yabai -m config window_shadow               float
+# yabai -m config window_animation_duration   0.0
+# yabai -m config window_animation_easing     ease_out_circ
+# yabai -m config window_opacity_duration     0.0
+# yabai -m config active_window_opacity       1.0
+# yabai -m config normal_window_opacity       0.90
+# yabai -m config window_opacity              off
+# yabai -m config insert_feedback_color       0xE02d74da
+yabai -m config split_ratio 0.375
+# yabai -m config split_ratio 0.625
+# yabai -m config split_type                  auto
+# yabai -m config auto_balance on
+yabai -m config top_padding 40
+yabai -m config left_padding 40
+yabai -m config bottom_padding 40
+yabai -m config right_padding 40
+yabai -m config window_gap 40
+yabai -m config layout bsp
+# yabai -m config mouse_modifier fn
+# yabai -m config mouse_action1               move
+# yabai -m config mouse_action2               resize
+# yabai -m config mouse_drop_action           swap
+# yabai -m config window_topmost              on
+# yabai -m config window_border_width         5
+# yabai -m config window_border               on
+# yabai -m config active_window_border_color  0xE0FFOOOO
+# yabai -m config normal_window_border_color  0x00010101
+
+#
+# setup spaces
+#
+# for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
+#   yabai -m space --destroy 7
+# done
+
+# function setup_space {
+#   local idx="$1"
+#   local name="$2"
+#   local space=
+#   echo "setup space $idx : $name"
+#
+#   space=$(yabai -m query --spaces --space "$idx")
+#   if [ -z "$space" ]; then
+#     yabai -m space --create
+#   fi
+#
+#   yabai -m space "$idx" --label "$name"
+# }
+#
+# setup_space 1 primary
+# setup_space 2 secondary
+# setup_space 3 code
+# setup_space 4 design
+# setup_space 5 finder
+#
+# setup_space 6 notes
+# setup_space 7 temp1
+# setup_space 8 temp2
+# setup_space 9 temp3
+# setup_space 10 temp4
+#
+# setup_space 11 settings
+# setup_space 12 blank1
+# setup_space 13 blank2
+# setup_space 14 blank3
+# setup_space 15 blank4
+# setup_space 16 blank5
+#
+
+# setup_space 1 1
+# setup_space 2 2
+# setup_space 3 3
+# setup_space 4 4
+# setup_space 5 5
+# setup_space 6 6
+# setup_space 7 7
+# setup_space 8 8
+# setup_space 9 9
+# setup_space 10 10
+# setup_space 11 11
+# setup_space 12 12
+# setup_space 13 13
+# setup_space 14 14
+# setup_space 15 15
+# setup_space 16 16
+#
+# yabai -m space 1 --label 1
+# yabai -m space 2 --label 2
+# yabai -m space 3 --label 3
+# move some apps automatically to specific spaces
+# yabai -m rule --add app="^Safari$" space=^3
+# yabai -m rule --add app="^Firefox$" space=^3
+# yabai -m rule --add app="^Telegram$" space=4
+# yabai -m rule --add app="^Music$" space=5
+# yabai -m rule --add app="^Spotify$" space=5
+
+# ===== Rules ==================================
+
+# yabai -m rule --add app=".*" sub-layer=normal
+
+# get app names
+# yabai -m query --windows | jq -r '.[].app'
+
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+yabai -m rule --add label="macfeh" app="^macfeh$" manage=off
+yabai -m rule --add label="Blender File View" app="^Blender$" manage=off
+yabai -m rule --add label="WebStorm" app="^WebStorm$" title="^(Settings|Welcome to WebStorm|Extract Component|Rename)$" manage=off
+yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
+yabai -m rule --add label="App Store" app="^App Store$" manage=off
+yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
+yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
+yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
+yabai -m rule --add label="mpv" app="^mpv$" manage=off
+yabai -m rule --add label="Raycast Settings" app="^Raycast$" manage=off
+yabai -m rule --add label="Software Update" title="Software Update" manage=off
+yabai -m rule --add label="System Settings" title="System Settings" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+yabai -m rule --add label="BetterSnapTool" title="BetterSnapTool" manage=off
+yabai -m rule --add label="Stickies" title="Stickies" manage=off
+# yabai -m rule --add label="Zen" title="Extension: (Bitwarden Password Manager) - Bitwarden" manage=off
+
+#yabai -m rule --add app="^Settings$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Raycast Settings$" manage=off
+yabai -m rule --add app="^ImageOptim$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Keychain Access$" manage=off
+yabai -m rule --add app="^Developer Tools$" manage=off
+yabai -m rule --add app="^Blender File View$" manage=off
+yabai -m rule --add app="^Perplexity$" manage=off
+yabai -m rule --add app="^SteerMouse$" manage=off
+yabai -m rule --add app="^UHK Agent$" manage=off
+yabai -m rule --add app="^BetterSnapTool$" manage=off
+yabai -m rule --add app="^kunkun$" manage=off
+yabai -m rule --add app="^Stickies$" manage=off
+
+# ===== Signals ================================
+# yabai -m signal --add app='^Finder$' event=window_created action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Finder$' event=window_destroyed action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+
+yabai -m signal --add event=window_created action='ymsp window-created'
+yabai -m signal --add event=application_launched action='ymsp window-created'
+# ymsp on-yabai-start
+
+set +x
+echo "yabai configuration loaded.."
+ymsp on-yabai-start
+# borders active_color=0xffffcc00 width=20.0 &
+# borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+# borders active_color="glow(0xffFFCC00)" width=20.0 hidpi=on &

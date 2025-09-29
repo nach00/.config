@@ -1,0 +1,82 @@
+theme = "fluoromachine"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+# Core Movement (Recurva layout)
+[keys.normal]
+# Movement
+h = "move_char_left"
+i = "move_char_right"
+e = "move_line_down"
+a = "move_line_up"
+I = "goto_line_end"
+H = "goto_line_start"
+
+# Mode Changes
+j = "insert_mode"
+l = "append_mode"
+J = ["goto_line_start", "insert_mode"]
+L = ["goto_line_end", "append_mode"]
+
+# Page Navigation
+#E = ["half_page_down", "align_view_center"]
+#A = ["half_page_up", "align_view_center"]
+
+# File Operations
+#"Cmd-s" = ":w"
+"q" = { q = ":q!" }  # qq for force quit
+"z" = { z = ":wq" }  # zz for save and quit
+W = { W = ":w" }     # WW for save
+
+# Navigation
+#"Cmd-e" = ":buffer-previous"
+#"Cmd-1" = ":theme default"  # Example since Helix doesn't have direct Neo-tree equivalent
+
+# Search
+n = ["search_next", "align_view_center"]
+N = ["search_prev", "align_view_center"]
+#s = { s = "search_clear" }  # ss to clear search
+
+[keys.select]
+# Movement in select mode
+h = "extend_char_left"
+i = "extend_char_right"
+e = "extend_line_down"
+a = "extend_line_up"
+I = "extend_to_line_end"
+H = "extend_to_line_start"
+
+# Disable original navigation keys
+j = "no_op"
+k = "no_op"
+l = "no_op"
+
+# Selection Navigation
+#E = ["extend_half_page_down", "align_view_center"]
+#A = ["extend_half_page_up", "align_view_center"]
+
+[keys.insert]
+# Save in insert mode
+#"Cmd-s" = ":w"
+
+# Navigation in insert mode
+"left" = "move_char_left"
+"right" = "move_char_right"
+"up" = "move_line_up"
+"down" = "move_line_down"
+
+# Special key behavior
+"ret" = "insert_newline"
+"S-ret" = ["insert_newline", "move_line_up"]
+"backspace" = "delete_char_backward"
+"del" = "delete_char_forward"

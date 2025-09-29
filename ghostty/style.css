@@ -1,0 +1,60 @@
+/*
+ * All colours are taken from the Catppuccin Macchiato Kitty theme, or from
+ * Kitty's tab bar gradient using a color picker.
+ */
+
+headerbar {
+    padding: 0;
+    margin: 0;
+    min-height: 10px;
+}
+
+tabbar tabbox {
+    margin: 0;
+    padding: 0;
+    min-height: 10px;
+    background-color: #181926;
+    font-family: monospace;
+}
+
+tabbar tabbox tab {
+    margin: 0;
+    padding: 0;
+    background-color: #1e2030;
+    color: #cad3f5;
+}
+
+tabbar tabbox tab:selected {
+    padding: 0 38px;
+    color: #181926;
+    background-image:
+        linear-gradient(#181926, #181926), linear-gradient(#433a5a, #433a5a),
+        linear-gradient(#6f5c8e, #6f5c8e), linear-gradient(#9a7ec2, #9a7ec2),
+        linear-gradient(#c6a0f6, #c6a0f6), linear-gradient(#9a7ec2, #9a7ec2),
+        linear-gradient(#6f5c8e, #6f5c8e), linear-gradient(#433a5a, #433a5a),
+        linear-gradient(#181926, #181926);
+    background-size:
+        10px 100%,
+        20px 100%,
+        30px 100%,
+        40px 100%,
+        calc(100% - 40px) 100%,
+        calc(100% - 30px) 100%,
+        calc(100% - 20px) 100%,
+        calc(100% - 10px) 100%,
+        100% 100%;
+    background-repeat: no-repeat;
+}
+
+tabbar tabbox tab:selected button image {
+    color: #181926;
+}
+
+tabbar tabbox tab label {
+    font-size: 14px;
+}
+
+tabbar tabbox tab:selected label {
+    font-style: italic;
+    font-weight: bold;
+}

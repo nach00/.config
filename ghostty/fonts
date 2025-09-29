@@ -1,0 +1,43 @@
+font-size = 16
+# font-thicken = false
+
+# Berkeley Mono
+# font-family = BerkeleyMono Nerd Font Variable
+
+# SF Mono
+# font-family = SF Mono
+
+
+# Cartograph CF
+font-family = CartographCF Nerd Font Mono
+
+# Ellogpraph CF
+# font-family = Ellograph CF
+# font-family-bold = Ellograph CF Bold
+# font-family-italic = Ellograph CF Italic
+# font-family-bold-italic = Ellograph CF Bold Italic
+
+# JetBrains Mono
+# font-family = JetBrains Nerd Font
+# font-family-italic = BerkeleyMono Nerd Font Variable Italic Regular
+
+# Berkeley Mono
+#   Berkeley Mono Bold
+#   Berkeley Mono Bold
+#   Berkeley Mono Bold Italic
+#   Berkeley Mono Bold Italic
+#   Berkeley Mono Italic
+#   Berkeley Mono Italic
+#   Berkeley Mono Regular
+#   Berkeley Mono Regular
+# Berkeley Mono Variable
+#   Berkeley Mono Variable Italic Bold Italic
+#   Berkeley Mono Variable Italic Regular
+#   Berkeley Mono Variable Regular Bold
+#   Berkeley Mono Variable Regular Regular
+# BerkeleyMono Nerd Font Mono Plus Font Awesome Plus Octicons Plus Power Symbols Plus Codicons Plus Pomicons Plus Font Logos Plus Material Design Icons Plus Weather Icons
+#   FiraCode+ BerkeleyMono Nerd Font Mono
+#   FiraCode+ BerkeleyMono Nerd Font Mono Bold
+#   FiraCode+ BerkeleyMono Nerd Font Mono Bold Italic
+#   FiraCode+ BerkeleyMono Nerd Font Mono Italic
+#

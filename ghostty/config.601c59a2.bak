@@ -1,0 +1,53 @@
+# config-file = ~/.config/ghostty/colors
+config-file = ~/.config/ghostty/keybinds
+config-file = ~/.config/ghostty/fonts
+theme = "/Users/jazz/.config/ghostty/tokyonight/tokyonight_night"
+
+# adjust-cell-height = 10%
+command = /bin/zsh
+initial-command = /bin/zsh -c "tmux new -A -s main"
+initial-window = false
+copy-on-select = true
+mouse-hide-while-typing = true
+macos-non-native-fullscreen = visible-menu
+macos-option-as-alt = true
+macos-titlebar-style = tabs
+window-decoration= false
+window-padding-y = 0
+window-padding-x = 0
+window-padding-color = extend
+window-padding-balance = true
+window-save-state = always
+window-decoration = auto
+
+grapheme-width-method = unicode
+freetype-load-flags = hinting,force-autohint,monochrome,autohint
+selection-invert-fg-bg = false
+minimum-contrast = 1
+cursor-invert-fg-bg = false
+cursor-style = block
+cursor-click-to-move = true
+mouse-hide-while-typing = false
+mouse-shift-capture = false
+mouse-scroll-multiplier = 1
+wait-after-command = false
+abnormal-command-exit-runtime = 250
+scrollback-limit = 10000000
+link-url = true
+fullscreen = false
+
+# adjust-cursor-thickness = 300%
+# adjust-cell-width = -5%
+
+
+# custom-shader = ./shaders/animated-gradient-shader.glsl
+# custom-shader = ./shaders/retro-terminal.glsl
+# custom-shader = ./shaders/bloom.glsl
+# custom-shader-animation = true
+quick-terminal-position = top
+quick-terminal-screen = macos-menu-bar
+quick-terminal-animation-duration = 0.2
+
+background-opacity = 0.9
+background-blur-radius = 20
+unfocused-split-opacity = 0.7

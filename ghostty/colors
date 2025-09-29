@@ -1,0 +1,135 @@
+# palette = 0=#241B2F
+# # palette = 0=#16181a
+# palette = 1=#AF6DF9
+# palette = 2=#72F1B8
+# palette = 3=#FFCC00
+# palette = 4=#FE4450
+# palette = 5=#FF7EDB
+# palette = 6=#61E2FF
+# palette = 7=#F8F8F8
+# palette = 8=#495495
+# palette = 9=#bf8afa
+# palette = 10=#39795c
+# palette = 11=#ffd633
+# palette = 12=#fe6973
+# palette = 13=#ff98e2
+# palette = 14=#81e8ff
+# palette = 15=#ffffff
+#
+# background = #16181a
+# # background = #262336
+# foreground = #F8F8F8
+# cursor-color = #C0FF98
+# selection-background = #463465
+# selection-foreground = #F8F8F8
+
+
+# background = #190920
+# foreground = #ffffff
+#
+# # black
+# palette = 0=#241B2F
+# palette = 8=#495495
+#
+# # red
+# palette = 1=#FE4450
+# palette = 9=#fe6973
+#
+# # green
+# palette = 2=#72F1B8
+# palette = 10=#39795c
+#
+# # yellow
+# palette = 3=#FFCC00
+# palette = 11=#ffd633
+#
+# # blue
+# palette = 4=#AF6DF9
+# palette = 12=#bf8afa
+#
+# # magenta
+# palette = 5=#FF7EDB
+# palette = 13=#ff98e2
+#
+# # cyan
+# palette = 6=#61E2FF
+# palette = 14=#81e8ff
+#
+# # white
+# palette = 7=#F8F8F8
+# palette = 15=#ffffff
+#
+# cyberdream theme for ghostty
+palette = 0=#16181a
+palette = 1=#ff6e5e
+palette = 2=#5eff6c
+palette = 3=#f1ff5e
+palette = 4=#5ea1ff
+palette = 5=#bd5eff
+palette = 6=#5ef1ff
+palette = 7=#ffffff
+palette = 8=#3c4048
+palette = 9=#ff6e5e
+palette = 10=#5eff6c
+palette = 11=#f1ff5e
+palette = 12=#5ea1ff
+palette = 13=#bd5eff
+palette = 14=#5ef1ff
+palette = 15=#ffffff
+
+background = #16181a
+foreground = #ffffff
+cursor-color = #ffffff
+selection-background = #3c4048
+selection-foreground = #ffffff
+
+# palette = 0=#0a0c0e
+# palette = 1=#ff5a4a
+# palette = 2=#40ff58
+# palette = 3=#ffff40
+# palette = 4=#4a8cff
+# palette = 5=#d040ff
+# palette = 6=#40ffff 
+# palette = 7=#ffffff
+# palette = 8=#2a2e36
+# palette = 9=#ff5a4a
+# palette = 10=#40ff58
+# palette = 11=#ffff40 
+# palette = 12=#4a8cff
+# palette = 13=#d040ff
+# palette = 14=#40ffff
+# palette = 15=#ffffff
+
+# palette = 0=#000000
+# palette = 1=#ff3030
+# palette = 2=#00ff00
+# palette = 3=#ffff00
+# palette = 4=#0080ff
+# palette = 5=#ff00ff
+# palette = 6=#00ffff
+# palette = 7=#ffffff
+# palette = 8=#202020
+# palette = 9=#ff3030
+# palette = 10=#00ff00
+# palette = 11=#ffff00
+# palette = 12=#0080ff
+# palette = 13=#ff00ff
+# palette = 14=#00ffff
+# palette = 15=#ffffff
+
+# palette = 0=#000000
+# palette = 1=#ff0000
+# palette = 2=#00ff00
+# palette = 3=#ffff00
+# palette = 4=#0000ff
+# palette = 5=#ff00ff
+# palette = 6=#00ffff
+# palette = 7=#ffffff
+# palette = 8=#181818
+# palette = 9=#ff0000
+# palette = 10=#00ff00
+# palette = 11=#ffff00
+# palette = 12=#0000ff
+# palette = 13=#ff00ff
+# palette = 14=#00ffff
+# palette = 15=#ffffff

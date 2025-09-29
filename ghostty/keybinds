@@ -1,0 +1,105 @@
+# CG+HEAI (Mod+heai)
+# yabai focus
+keybind = ctrl+super+h=unbind
+keybind = ctrl+super+e=unbind
+keybind = ctrl+super+a=unbind
+keybind = ctrl+super+i=unbind
+
+# CA+HEAI (Fn2 + heai)
+# nvim focus
+keybind = ctrl+alt+h=unbind
+keybind = ctrl+alt+e=unbind
+keybind = ctrl+alt+a=unbind
+keybind = ctrl+alt+i=unbind
+
+# CAS+HEAI (Fn2 + l'"y)
+# nvim move
+keybind = ctrl+alt+shift+h=unbind
+keybind = ctrl+alt+shift+e=unbind
+keybind = ctrl+alt+shift+a=unbind
+keybind = ctrl+alt+shift+i=unbind
+
+# CA+Arrow (Fn2 + arrows)
+# nvim resize
+keybind = ctrl+alt+left=unbind
+keybind = ctrl+alt+down=unbind
+keybind = ctrl+alt+up=unbind
+keybind = ctrl+alt+right=unbind
+
+# AG+HEAI (Fn + heai)
+# ghostty focus
+keybind = super+alt+h=goto_split:left
+keybind = super+alt+e=goto_split:bottom
+keybind = super+alt+a=goto_split:top
+keybind = super+alt+i=goto_split:right
+
+# AG+Arrow
+# ghostty resize
+keybind = super+alt+down=resize_split:down,10
+keybind = super+alt+left=resize_split:left,10
+keybind = super+alt+up=resize_split:up,10
+keybind = super+alt+right=resize_split:right,10
+
+# AGS+HEAI
+# ghostty create
+keybind = super+alt+shift+h=new_split:left
+keybind = super+alt+shift+e=new_split:down
+keybind = super+alt+shift+a=new_split:up
+keybind = super+alt+shift+i=new_split:right
+
+# G+HEAI
+# Zellij focus
+keybind = super+h=unbind
+keybind = super+e=unbind
+keybind = super+a=unbind
+keybind = super+i=unbind
+
+keybind = ctrl+left=unbind
+keybind = ctrl+down=unbind
+keybind = ctrl+up=unbind
+keybind = ctrl+right=unbind
+
+# Reload ghostty config Ctrl+Alt+Cmd-r
+keybind = ctrl+alt+super+r=reload_config
+
+keybind = super+left=unbind
+keybind = super+down=unbind
+keybind = super+up=unbind
+keybind = super+right=unbind
+
+### Ghostty keybind disables
+# duplicate line
+keybind = super+d=unbind
+
+# frecency nvim plugin
+# keybind = super+e=text:\x1b1
+
+# neovim select all
+# keybind = super+a=text:ggvG
+
+# unbind copy (cmd+c)
+keybind = super+c=unbind
+
+# unbind paste (cmd+y)
+keybind = super+y=unbind
+
+
+# Select all
+# keybind = super+a=text:ggVG
+ # keybind = super+a=text:\x1b3
+# keybind = super+a=unbind
+# keybind = super+a=text:\x01
+
+# quickterminal
+# keybind = global:super+`=toggle_quick_terminal
+
+# tab navigation
+# keybind = cmd+left=next_tab
+# keybind = cmd+right=previous_tab
+# keybind = ctrl+-=next_tab
+# keybind = ctrl+==previous_tab
+# keybind = super+i=next_tab
+# keybind = super+h=previous_tab
+#
+# rename tab
+# keybind = cmd+r=prompt_surface_title

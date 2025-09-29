@@ -1,0 +1,132 @@
+# # Fluoromachine theme for Helix
+# inherits = "default"
+#
+# [palette]
+# # Base colors
+# bg = "#190920"
+# bgdark = "#0D040F"  # darkened by 20
+# cyan = "#49eaff"
+# red = "#ff1e34"
+# yellow = "#ffe756"
+# orange = "#f38e21"
+# pink = "#ffadff"
+# purple = "#9544f7"
+# white = "#ffffff"
+# gray = "#666666"
+#
+# # UI
+# "ui.background" = { bg = "bg" }
+# "ui.background.separator" = { fg = "bgdark" }
+# "ui.cursor" = { modifiers = ["reversed"] }
+# "ui.cursor.match" = { fg = "purple", modifiers = ["underlined"] }
+# "ui.cursor.primary" = { modifiers = ["reversed"] }
+# "ui.gutter" = { bg = "bg" }
+# "ui.help" = { bg = "bgdark", fg = "white" }
+# "ui.linenr" = { fg = "gray" }
+# "ui.linenr.selected" = { fg = "white" }
+# "ui.menu" = { bg = "bgdark", fg = "white" }
+# "ui.menu.selected" = { bg = "purple", fg = "white" }
+# "ui.popup" = { bg = "bgdark" }
+# "ui.selection" = { bg = "purple", fg = "white" }
+# "ui.statusline" = { bg = "bgdark", fg = "white" }
+# "ui.statusline.inactive" = { bg = "bg", fg = "gray" }
+# "ui.text" = { fg = "white" }
+# "ui.text.focus" = { fg = "cyan" }
+# "ui.virtual.indent-guide" = { fg = "gray" }
+# "ui.virtual.ruler" = { bg = "bgdark" }
+#
+# # Syntax highlighting based on the Neovim configuration
+# "type" = { fg = "cyan" }
+# "constructor" = { fg = "purple" }
+# "constant" = { fg = "purple" }
+# "string" = { fg = "yellow" }
+# "string.special" = { fg = "orange" }
+# "comment" = { fg = "gray", modifiers = ["italic"] }
+# "variable" = { fg = "white" }
+# "variable.parameter" = { fg = "orange" }
+# "label" = { fg = "pink" }
+# "punctuation" = { fg = "white" }
+# "keyword" = { fg = "purple" }
+# "keyword.control" = { fg = "purple" }
+# "keyword.function" = { fg = "purple" }
+# "keyword.operator" = { fg = "purple" }
+# "function" = { fg = "cyan" }
+# "function.method" = { fg = "cyan" }
+# "operator" = { fg = "purple" }
+# "tag" = { fg = "pink" }
+# "namespace" = { fg = "cyan" }
+#
+# # Special syntax
+# "markup.heading" = { fg = "purple", modifiers = ["bold"] }
+# "markup.list" = { fg = "cyan" }
+# "markup.bold" = { fg = "orange", modifiers = ["bold"] }
+# "markup.italic" = { fg = "yellow", modifiers = ["italic"] }
+# "markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+# "markup.link.text" = { fg = "pink" }
+# "markup.quote" = { fg = "yellow", modifiers = ["italic"] }
+#
+# # Diagnostics
+# "diagnostic" = { modifiers = ["underlined"] }
+# "error" = { fg = "red" }
+# "warning" = { fg = "yellow" }
+# "info" = { fg = "cyan" }
+# "hint" = { fg = "purple" }
+
+# Fluoromachine theme for Helix
+
+"ui.background" = { bg = "#190920" }
+"ui.background.separator" = { fg = "#0D040F" }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "#9544f7", modifiers = ["underlined"] }
+"ui.cursor.primary" = { modifiers = ["reversed"] }
+"ui.gutter" = { bg = "#190920" }
+"ui.help" = { bg = "#0D040F", fg = "#ffffff" }
+"ui.linenr" = { fg = "#666666" }
+"ui.linenr.selected" = { fg = "#ffffff" }
+"ui.menu" = { bg = "#0D040F", fg = "#ffffff" }
+"ui.menu.selected" = { bg = "#9544f7", fg = "#ffffff" }
+"ui.popup" = { bg = "#0D040F" }
+"ui.selection" = { bg = "#9544f7", fg = "#ffffff" }
+"ui.statusline" = { bg = "#0D040F", fg = "#ffffff" }
+"ui.statusline.inactive" = { bg = "#190920", fg = "#666666" }
+"ui.text" = { fg = "#ffffff" }
+"ui.text.focus" = { fg = "#49eaff" }
+"ui.virtual.indent-guide" = { fg = "#666666" }
+"ui.virtual.ruler" = { bg = "#0D040F" }
+
+# Syntax highlighting
+"type" = { fg = "#49eaff" }
+"constructor" = { fg = "#9544f7" }
+"constant" = { fg = "#9544f7" }
+"string" = { fg = "#ffe756" }
+"string.special" = { fg = "#f38e21" }
+"comment" = { fg = "#666666", modifiers = ["italic"] }
+"variable" = { fg = "#ffffff" }
+"variable.parameter" = { fg = "#f38e21" }
+"label" = { fg = "#ffadff" }
+"punctuation" = { fg = "#ffffff" }
+"keyword" = { fg = "#9544f7" }
+"keyword.control" = { fg = "#9544f7" }
+"keyword.function" = { fg = "#9544f7" }
+"keyword.operator" = { fg = "#9544f7" }
+"function" = { fg = "#49eaff" }
+"function.method" = { fg = "#49eaff" }
+"operator" = { fg = "#9544f7" }
+"tag" = { fg = "#ffadff" }
+"namespace" = { fg = "#49eaff" }
+
+# Special syntax
+"markup.heading" = { fg = "#9544f7", modifiers = ["bold"] }
+"markup.list" = { fg = "#49eaff" }
+"markup.bold" = { fg = "#f38e21", modifiers = ["bold"] }
+"markup.italic" = { fg = "#ffe756", modifiers = ["italic"] }
+"markup.link.url" = { fg = "#49eaff", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "#ffadff" }
+"markup.quote" = { fg = "#ffe756", modifiers = ["italic"] }
+
+# Diagnostics
+"diagnostic" = { modifiers = ["underlined"] }
+"error" = { fg = "#ff1e34" }
+"warning" = { fg = "#ffe756" }
+"info" = { fg = "#49eaff" }
+"hint" = { fg = "#9544f7" }

@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+
+# meh: ctrl + alt + shift
+# hyper: ctrl + alt + shift + cmd
+
+ctrl + alt + cmd - r : yabai --restart-service \
+	skhd --restart-service
+
+# Master Stack Layout Plugin
+# focus windows
+# hyper - u : ymsp focus-down-window
+# hyper - o : ymsp focus-up-window
+
+# adjust number of master windows
+hyper - o : ymsp increase-master-window-count
+hyper - u : ymsp decrease-master-window-count
+
+# Focusing windows
+# ctrl + alt - h : yabai -m window --focus west
+# ctrl + alt - e : yabai -m window --focus south
+# ctrl + alt - a : yabai -m window --focus north
+# ctrl + alt - i : yabai -m window --focus east
+
+# ## focus window
+# alt + ctrl - h : sh ~/.config/yabai/scripts/focusWindow.sh left
+# alt + ctrl - e : sh ~/.config/yabai/scripts/focusWindow.sh down
+# alt + ctrl - a : sh ~/.config/yabai/scripts/focusWindow.sh up
+# alt + ctrl - i : sh ~/.config/yabai/scripts/focusWindow.sh right
+#
+# # Moving windows
+# ctrl + cmd - h : yabai -m window --warp west
+# ctrl + cmd - e : yabai -m window --warp south
+# ctrl + cmd - a : yabai -m window --warp north
+# ctrl + cmd - i : yabai -m window --warp east
+#
+#
+# # Resize windows
+# ctrl + shift - h : yabai -m window --resize left:-50:0; \
+#                    yabai -m window --resize right:-50:0
+# ctrl + shift - e : yabai -m window --resize bottom:0:50; \
+#                    yabai -m window --resize top:0:50
+# ctrl + shift - a : yabai -m window --resize top:0:-50; \
+#                    yabai -m window --resize bottom:0:-50
+# ctrl + shift - i : yabai -m window --resize right:50:0; \
+#                    yabai -m window --resize left:50:0
+
+# CG+HEAI
+# Focus
+cmd + ctrl - h : sh ~/.config/yabai/scripts/focusWindow.sh left
+cmd + ctrl - e : sh ~/.config/yabai/scripts/focusWindow.sh down
+cmd + ctrl - a : sh ~/.config/yabai/scripts/focusWindow.sh up
+cmd + ctrl - i : sh ~/.config/yabai/scripts/focusWindow.sh right
+
+# CG+Arrows
+# Resize
+cmd + ctrl - left : yabai -m window --resize right:-50:0
+cmd + ctrl - down : yabai -m window --resize bottom:0:50
+cmd + ctrl - up : yabai -m window --resize bottom:0:-50
+cmd + ctrl - right : yabai -m window --resize right:50:0
+
+# cmd + ctrl - left  : yabai -m window --resize left:-50:0; \ yabai -m window --resize right:-50:0
+# cmd + ctrl - down  : yabai -m window --resize bottom:0:50; \ yabai -m window --resize top:0:50
+# cmd + ctrl - up    : yabai -m window --resize top:0:-50; \ yabai -m window --resize bottom:0:-50
+# cmd + ctrl - right : yabai -m window --resize right:50:0; \ yabai -m window --resize left:50:0
+
+# CGS+HEAI
+# Move
+cmd + ctrl + shift - h : yabai -m window --warp west
+cmd + ctrl + shift - e : yabai -m window --warp south
+cmd + ctrl + shift - a : yabai -m window --warp north
+cmd + ctrl + shift - i : yabai -m window --warp east
+
+# CGS+Arrows
+# Swap
+cmd + ctrl + shift - left : yabai -m window --swap west
+cmd + ctrl + shift - down : yabai -m window --swap south
+cmd + ctrl + shift - up : yabai -m window --swap north
+cmd + ctrl + shift - right : yabai -m window --swap east
+
+# Move window to space and focus
+# ctrl + alt - u : yabai -m window --space 1 --focus
+# ctrl - f1 : yabai -m window --space 1
+# ctrl - f2 : yabai -m window --space 2
+# ctrl - f1 : yabai -m window --space 1 --focus
+# ctrl - f2 : yabai -m window --space 2 --focus
+# meh - 1 : yabai -m window --space 1 --focus
+# meh - 2 : yabai -m window --space 2 --focus
+
+# Equalize size of windows
+hyper - z : yabai -m space --balance
+
+# Enable / Disable gaps in current workspace
+# hyper - 8 : yabai -m space --toggle padding
+# yabai -m space --toggle gap
+
+# Rotate windows clockwise and anticlockwise
+hyper - r : yabai -m space --rotate 270
+# hyper - 0 : yabai -m space --rotate 90
+
+# Rotate on X and Y Axis
+# shift + alt - x : yabai -m space --mirror x-axis
+# shift + alt - y : yabai -m space --mirror y-axis
+
+# Set insertion point for focused container
+# shift + lctrl + alt - h : yabai -m window --insert west
+# shift + lctrl + alt - e : yabai -m window --insert south
+# shift + lctrl + alt - a : yabai -m window --insert north
+# shift + lctrl + alt - i : yabai -m window --insert east
+
+# float / unfloat window and center on screen
+hyper - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# focus monitor
+# ctrl + alt - z : yabai -m display --focus prev || yabai -m display --focus next
+ctrl + alt - z : yabai -m display --focus next || yabai -m display --focus first
+
+# send window to monitor and follow focus
+shift + cmd - space : yabai -m window --display prev || yabai -m window --display next && yabai -m window --focus recent

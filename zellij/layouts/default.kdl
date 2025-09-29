@@ -1,0 +1,56 @@
+
+layout {
+    default_tab_template {
+        children
+        pane size=2 borderless=true {
+            plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
+
+                format_left      " {tabs} "
+                format_right     "#[fg=#ff5ef1,bold] {session}{pipe_zjstatus_hints} {mode} "
+                format_space  "#[fg=yellow] "
+
+                border_enabled  "true"
+                border_char     "─"
+                border_position "top"
+                border_format   "#[fg=#3c4048]{char}"
+                // hide_frame_for_single_pane "true"
+
+                // mode_locked      "#[fg=#ff6e5e,bold]locked "
+                // mode_normal      "#[fg=#5ea1ff,bold]normal "
+                mode_locked      "#[fg=#ff6e5e,bold]lock "
+                mode_normal      "#[fg=#5ea1ff,bold]normal "
+                mode_resize      "#[fg=#ff5ef1,bold]resize "
+                mode_pane        "#[fg=#bd5eff,bold]pane "
+                mode_move        "#[fg=#f1ff5e,bold]move "
+                mode_tab         "#[fg=#5ef1ff,bold]tab "
+                mode_scroll      "#[fg=#5eff6c,bold]scroll "
+                mode_search      "#[fg=#f1ff5e,bold]search "
+                mode_entersearch "#[fg=#f1ff5e,bold]enter "
+                mode_renametab   "#[fg=#5ef1ff,bold]tab name "
+                mode_renamepane  "#[fg=#bd5eff,bold]pane name "
+                mode_session     "#[fg=#ff5ea0,bold]session "
+                mode_tmux        "#[fg=#ffbd5e,bold]tmux "
+
+                session_format       "#[bg=#ff5ef1,fg=#1e1e2e,bold] {name} "
+                tab_normal           "#[fg=#7b8496] {name} "
+                tab_active           "#[fg=#ffcc00,bold,italic] {name} "
+                tab_sync             "#[fg=#f1ff5e] sync "
+
+                tab_separator " "
+
+                pipe_zjstatus_hints_format      "{output}"
+
+                datetime              "#[fg=#5eff6c,bold] {format} "
+                datetime_format       "%a %b %d"
+                datetime_timezone     "America/Chicago"
+
+            }
+        }
+        // children
+        // pane
+    }
+    tab name="config" focus=true borderless=true
+    // tab name="󰎦" focus=true borderless=true
+    // tab name="󰎩"
+    // tab name="󰎬"
+}
